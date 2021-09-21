@@ -18,7 +18,7 @@ public class ConexionBaseDatos {
     public ConexionBaseDatos() {
         DB_driver="com.mysql.jdbc.Driver";
         host="localhost:3306";
-        db="basedatoss45";
+        db="easyparking";
         url="jdbc:mysql://"+host+"/"+db;
         username="root";
         password="!A3F9xj%";
