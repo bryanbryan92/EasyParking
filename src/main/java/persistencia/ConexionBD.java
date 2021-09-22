@@ -4,7 +4,7 @@ package persistencia;
 import java.sql.*;
 
 
-public class ConexionBaseDatos {
+public class ConexionBD {
     private String DB_driver="";
     private String url="";
     private String db="";
@@ -15,7 +15,7 @@ public class ConexionBaseDatos {
     public Connection conexion=null;
     private Statement stmt=null;
     
-    public ConexionBaseDatos() {
+    public ConexionBD() {
         DB_driver="com.mysql.jdbc.Driver";
         host="localhost:3306";
         db="easyparking";
@@ -60,12 +60,12 @@ public class ConexionBaseDatos {
             stmt=conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             resultset=stmt.executeQuery(sentencia);
         }catch(SQLException ex){
-            System.out.println("Error al cosultar en la base de datos");
+            System.out.println("Error al consultar en la base de datos");
         }
         return resultset;
     }
     
-    public boolean insertarDB(String sentencia){
+    public boolean insertarBD(String sentencia){
         try{
             stmt=conexion.createStatement();
             stmt.execute(sentencia);
