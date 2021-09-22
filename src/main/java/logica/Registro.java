@@ -54,7 +54,7 @@ public class Registro {
     
     public boolean guardarRegistro(){
         ConexionBD conexion = new ConexionBD();
-        String sentencia = "INSERT INTO registro(placa, modelo, apellido, color, vehiculo)"
+        String sentencia = "INSERT INTO registro(placa, modelo, color, vehiculo)"
                 + " VALUES ( '" + this.placa + "','" + this.modelo + "','"
                 + "'" + this.color + "','" + this.vehiculo +  "');  ";
         //Vamos a configurar el setAutocommit de la conexionBD a falso
@@ -117,7 +117,7 @@ public class Registro {
     
     public List<Registro> listarRegistros() throws SQLException{
         ConexionBD conexion = new ConexionBD();
-        String sentencia = "SELECT * FROM contactos ORDER BY identificacion ASC;";
+        String sentencia = "SELECT * FROM registro ORDER BY placa ASC;";
         List<Registro> listaRegistros = new ArrayList<>();
         ResultSet datos = conexion.consultarBD(sentencia);
         
