@@ -44,6 +44,7 @@ public class Registro {
         this.vehiculo = vehiculo;
     }
     
+    //Metodos para el CRUD de Registro
     
     
 }
