@@ -71,7 +71,8 @@ public class ConexionBD {
             stmt.execute(sentencia);
             return true;
         }catch(SQLException ex){
-            System.out.println("Error al insertar en la base de datos");
+            System.out.println("Error al insertar en la base de datos" + ex);
+            
             return false;
         }
     }

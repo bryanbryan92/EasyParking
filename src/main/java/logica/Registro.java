@@ -55,7 +55,7 @@ public class Registro {
     public boolean guardarRegistro(){
         ConexionBD conexion = new ConexionBD();
         String sentencia = "INSERT INTO registro(placa, modelo, color, vehiculo)"
-                + " VALUES ( '" + this.placa + "','" + this.modelo + "','"
+                + " VALUES ( '" + this.placa + "','" + this.modelo + "',"
                 + "'" + this.color + "','" + this.vehiculo +  "');  ";
         //Vamos a configurar el setAutocommit de la conexionBD a falso
         if(conexion.setAutoCommitBD(false)){
