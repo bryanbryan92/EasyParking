@@ -47,7 +47,7 @@
             }
             break;
             
-        case "eliminarRegistro":
+        case "borrarRegistro":
             System.out.println("Eliminar registro");
             String placa = request.getParameter("placa");
             if(r.borrarRegistro(placa)){
@@ -62,9 +62,9 @@
             System.out.println("Listar Contactos");
             List<Registro> listaRegistros = r.listarRegistros();
             if(listaRegistros.isEmpty()){
-                respuesta += "\"" + proceso + "\": true,\"Contactos\":[]"; //genera una lista vacía en el json
+                respuesta += "\"" + proceso + "\": true,\"Registros\":[]"; //genera una lista vacía en el json
             } else{
-                respuesta += "\"" + proceso + "\": true,\"Contactos\":" + new Gson().toJson(listaRegistros); //guarda la lista en el json
+                respuesta += "\"" + proceso + "\": true,\"Registros\":" + new Gson().toJson(listaRegistros); //guarda la lista en el json
             }
 
             break;

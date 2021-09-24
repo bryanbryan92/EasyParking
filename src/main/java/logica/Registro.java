@@ -128,7 +128,7 @@ public class Registro {
     
     public List<Registro> listarRegistros() throws SQLException{
         ConexionBD conexion = new ConexionBD();
-        String sentencia = "SELECT * FROM registro ORDER BY placa ASC;";
+        String sentencia = "SELECT * FROM registro;";
         List<Registro> listaRegistros = new ArrayList<>();
         ResultSet datos = conexion.consultarBD(sentencia);
         
