@@ -9,14 +9,25 @@ import persistencia.ConexionBD;
 
 
 public class Registro {
+    private int id_registro;
     private String placa;
     private String modelo;
     private String color;
     private String vehiculo;
-
+    
+    
     public Registro() {
         
     }
+
+    public int getId_registro() {
+        return id_registro;
+    }
+
+    public void setId_registro(int id_registro) {
+        this.id_registro = id_registro;
+    }
+    
 
     public String getPlaca() {
         return placa;
@@ -95,8 +106,8 @@ public class Registro {
     
     public boolean actualizarRegistro(){
         ConexionBD conexion = new ConexionBD();
-        String sentencia = "UPDATE `registro` SET modelo='" + this.modelo + "',color='" + this.color + "',vehiculo='" + this.vehiculo
-                +  "' WHERE placa=" + this.placa + ";";
+        String sentencia = "UPDATE `registro` SET placa='" + this.placa + "',modelo='" + this.modelo + "',color='" + this.color + "',vehiculo='" + this.vehiculo
+                +  "' WHERE id_registro='" + this.id_registro + "';";
 
         if(conexion.setAutoCommitBD(false)){
             if(conexion.actualizarBD(sentencia)){
