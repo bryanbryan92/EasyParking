@@ -135,7 +135,7 @@ public class Registro {
         Registro registro;
         while (datos.next()) {
             registro = new Registro();
-            
+            registro.setId_registro(datos.getInt("id_registro"));
             registro.setPlaca(datos.getString("placa"));
             registro.setModelo(datos.getString("modelo"));
             registro.setColor(datos.getString("color"));
