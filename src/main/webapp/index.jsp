@@ -15,17 +15,31 @@
         <title>Registro</title>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6"><h1>Formulario de Registro</h1></div>
-                <div class="col-3"></div>
+        <div class="container-fluid" ng-app="easyparking" ng-controller="registroControlador">
+            <div class="row d-flex justify-content-center">     
+                <div class="col-6" style="text-align: center"><h1>REGISTRO</h1></div>  
             </div>
-            <div class="row">
-                <div class="col-4"><p>texto</p></div>
-                <div class="col-8"><p>texto 2</p></div>    
+            <div class="row d-flex justify-content-center">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Placa</label>
+                        <input type="text" class="form-control" placeholder="Escriba la placa" ng-model="placa">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Modelo</label>
+                        <input type="text" class="form-control" placeholder="Escriba el modelo" ng-model="modelo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Color</label>
+                        <input type="text" class="form-control" placeholder="Escriba su color" ng-model="color">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Vehiculo</label>
+                        <input type="text" class="form-control" placeholder="Que vehiculo es?" ng-model="vehiculo">
+                    </div>
+                    <button type="button" class="btn btn-success" ng-click="guardarRegistro()">Guardar</button>
+                </div>
             </div>
-        </div>
     </body>
-    <<script src="controlador.js"></script>
+    <script src="registroCtrl.js"></script>
 </html>
