@@ -18,6 +18,6 @@ app.controller('registroControlador',function($scope, $http){
             console.log(respuesta);
             alert("Guardado con Exito");
         });
-    }
+    };
 });
 
