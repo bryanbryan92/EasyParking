@@ -9,7 +9,7 @@
 <%@page import="logica.Registro"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% 
-    String respuesta="";
+    String respuesta="{";
     String proceso=request.getParameter("proceso");
     //a los request se les puede pasar parámetros
     //se va a validar el tipo de proceso
@@ -33,7 +33,7 @@
         case "actualizarRegistro":
             
             System.out.println("Actualizar Registro");
-            r.setId_registro(Integer.parseInt(request.getParameter("id_registro"))); //a este hay que convertirlo de entero a string
+//            r.setId_registro(Integer.parseInt(request.getParameter("id_registro"))); //a este hay que convertirlo de entero a string
             r.setPlaca(request.getParameter("placa"));
             r.setModelo(request.getParameter("modelo"));
             r.setColor(request.getParameter("color"));
@@ -48,7 +48,8 @@
             break;
             
         case "borrarRegistro":
-            System.out.println("Eliminar registro");
+            
+            
             String placa = request.getParameter("placa");
             if(r.borrarRegistro(placa)){
              respuesta += "\"" + proceso + "\": true";  // el \ se usa para concatenar en json indicando que se hizo el proceso (true)
@@ -59,7 +60,7 @@
             break;
             
         case "listarRegistros":
-            System.out.println("Listar Contactos");
+            System.out.println("Listar Registros");
             List<Registro> listaRegistros = r.listarRegistros();
             if(listaRegistros.isEmpty()){
                 respuesta += "\"" + proceso + "\": true,\"Registros\":[]"; //genera una lista vacía en el json
