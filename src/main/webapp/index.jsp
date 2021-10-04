@@ -46,7 +46,7 @@
                     <div class="col-6">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Placa*</label>
-                            <input type="text" class="form-control" placeholder="Escriba la placa" ng-model="placa">
+                            <input type="text" class="form-control" placeholder="Escriba la placa" ng-model="placa" ng-disabled="actualizar">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Modelo*</label>
@@ -72,7 +72,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <!--<th scope="col">Id_registro</th>-->
+                            
                             <th scope="col">Placa</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Color</th>
@@ -83,7 +83,7 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="registro in registros">
-                            <!--<th scope="row">{{registro.id_registro}}</th>-->
+                            
                             <td>{{registro.placa}}</td>      
                             <td>{{registro.modelo}}</td>
                             <td>{{registro.color}}</td>

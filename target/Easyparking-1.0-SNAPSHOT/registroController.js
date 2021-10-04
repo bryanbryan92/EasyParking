@@ -47,7 +47,7 @@ app.controller('registroControlador', function ($scope, $http) {
             params: params
         }).then(function (respuesta) {
             $scope.registros = respuesta.data.Registros;
-//            console.log(respuesta);
+
         });
     };
 
@@ -75,13 +75,12 @@ app.controller('registroControlador', function ($scope, $http) {
     $scope.actualizarRegistro = function () {
         let params = {
             proceso: 'actualizarRegistro',
-//            id_registro: $scope.id_registro,
             placa: $scope.placa,
             modelo: $scope.modelo,
             color: $scope.color,
             vehiculo: $scope.vehiculo
         };
-//        console.log(params);
+
         $http({
             method: 'GET',
             url: 'peticionesRegistro.jsp',

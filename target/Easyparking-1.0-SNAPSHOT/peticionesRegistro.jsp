@@ -33,7 +33,7 @@
         case "actualizarRegistro":
             
             System.out.println("Actualizar Registro");
-//            r.setId_registro(Integer.parseInt(request.getParameter("id_registro"))); //a este hay que convertirlo de entero a string
+         
             r.setPlaca(request.getParameter("placa"));
             r.setModelo(request.getParameter("modelo"));
             r.setColor(request.getParameter("color"));

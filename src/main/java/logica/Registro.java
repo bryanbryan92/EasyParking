@@ -108,8 +108,6 @@ public class Registro {
         ConexionBD conexion = new ConexionBD();
         String sentencia = "UPDATE `registro` SET modelo='" + this.modelo + "',color='" + this.color + "',vehiculo='" + this.vehiculo
                 +  "' WHERE placa='" + this.placa + "';";
-//        String sentencia = "UPDATE `registro` SET placa='" + this.placa + "',modelo='" + this.modelo + "',color='" + this.color + "',vehiculo='" + this.vehiculo
-//                +  "' WHERE id_registro='" + this.id_registro + "';";
 
         if(conexion.setAutoCommitBD(false)){
             if(conexion.actualizarBD(sentencia)){
